@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="form-container">
+    <form (ngSubmit)="onSubmit()" #itemForm="ngForm" class="form">
+      <div class="form-group">
+        <label for="nome">Nome do Item</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          name="nome"
+          [(ngModel)]="novoItem.nome"
+          required>
+        <div class="input-line"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <textarea
+          class="form-control"
+          id="descricao"
+          name="descricao"
+          [(ngModel)]="novoItem.descricao"
+          required></textarea>
+        <div class="input-line"></div>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        <span class="btn-text">Adicionar Item</span>
+        <span class="btn-icon">+</span>
+      </button>
+    </form>
+  </div>
+
+  <div class="items-section">
+    <h2 class="subtitle">Itens Cadastrados</h2>
+    <div class="items-grid">
+      @for (item of itens; track item.id; let i = $index) {
+        <div class="item-card">
+          <div class="item-content">
+            <h3 class="item-title">{{item.nome}}</h3>
+            <p class="item-description">{{item.descricao}}</p>
+          </div>
+          <button class="btn-remove-item" (click)="removerItem(i)">
+            <span class="btn-text">Remover Item</span>
+            <span class="btn-icon">×</span>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>
