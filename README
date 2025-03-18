@@ -1,6 +1,19 @@
-# formulário em Angular.
+# 📝 Meu Formulário em Angular
 
-## permita ao usuário cadastrar um item e exibir uma lista dos itens cadastrados.
+## 📌 Descrição
+Este projeto é um formulário desenvolvido em **Angular**, permitindo que os usuários cadastrem itens e visualizem uma lista dos itens registrados.
 
+### ✨ Funcionalidades
+- ✅ Cadastro de itens com **nome** e **descrição**.
+- ✅ Botões para **adicionar** e **remover** itens da lista.
+- ✅ Armazenamento dos dados utilizando **IndexedDB** para persistência.
 
-✔️ O formulário contem nome e descrição do item cadastrado 
+## 🚀 Tecnologias Utilizadas
+- **Angular** 🅰️
+- **IndexedDB** 📦 (armazenamento local)
+- **TypeScript** 🟦
+
+## 📦 Instalação e Execução
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/formulario-frontend-angular.git
